@@ -4,4 +4,6 @@ extends Camera3D
 
 func _input(event):
 	if event.is_action_pressed("TurnLeft"):
-		self.transform.basis.x += Vector3(TurnRate, 0, 0)
+		rotate_object_local(Vector3.UP, TurnRate)
+	if event.is_action_pressed("TurnRight"):
+		rotate_object_local(Vector3.DOWN, TurnRate)

@@ -15,3 +15,7 @@ func _input(event):
 		velocity += camera.transform.basis.z * -acceleration
 		velocity.y = 0
 		print("%v", velocity)
+	if event.is_action_pressed("MoveBackwards"):
+		velocity += camera.transform.basis.z * acceleration
+		velocity.y = 0
+		print("%v", velocity)
